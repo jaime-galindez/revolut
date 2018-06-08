@@ -66,7 +66,7 @@ public class AccountManager {
      *
      */
     public void transfer(Long originAccountId, Long destinationAccountId, BigDecimal amount) {
-        logger.info(String.format("Transfer called: originAccountId: %d, destinationAccountId: %d, amount: %s", originAccountId, destinationAccountId, amount.toString()));
+        logger.info(String.format("Transfer called: originAccountId: %d, destinationAccountId: %d, amount: %s", originAccountId, destinationAccountId, amount));
         if (originAccountId == null) {
             throw new BadParameterException()
                     .withProperty(BadParameterException.PARAMETER_NAME, "originAccountId")
